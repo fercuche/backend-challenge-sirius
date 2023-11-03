@@ -39,11 +39,15 @@ public class BackendApplication {
 		return (args -> {
 
 			User user1 = new User(
-					"Fernando", "Maciel","fernandomaciel.job@gmail.com",
+					"Fernando", "Maciel","fer2.maciel@gmail.com",
 					passwordEncoder.encode("asd1234"), Role.ADMIN);
+			user1.setEmailDailyCount(10);
+
 			User user2 = new User(
 					"Melba", "Morel","melbam@mail.com",
 					passwordEncoder.encode("asd1234"), Role.USER);
+			user2.setEmailDailyCount(1000);
+
 
 			userRepository.save(user1);
 			userRepository.save(user2);
